@@ -1,37 +1,44 @@
-# TimeLock
+# ScheduleLock
 
-A KOReader plugin that restricts device usage based on daily quotas and weekly schedule windows. Useful as a simple screen-time control for a shared or child's e-reader.
+A KOReader plugin that restricts device usage based on daily quotas and weekly schedule windows. It can also require a PIN to exit KOReader, change plugins, or set the time and date. Useful as a simple screen-time control for a shared or child's e-reader.
 
 ## Tested on
 
 Developed and tested on a **Kindle Paperwhite 12th Gen** running **KOReader 2026.07.02**.
 
-Reports from other devices are welcome.
-
 ## Install or update
 
-1. Download `timelock.koplugin.zip` from the Releases page and unzip it. You should have a folder named `timelock.koplugin`.
+1. Download `schedulelock.koplugin.zip` from the Releases page and unzip it. You should have a folder named `schedulelock.koplugin`.
 2. Connect your e-reader to a computer with USB.
-3. Copy the whole `timelock.koplugin` folder into KOReader's `plugins` folder. When updating, replace the existing folder.
+3. Copy the whole `schedulelock.koplugin` folder into KOReader's `plugins` folder. When updating, replace the existing folder.
 4. Eject the device and restart KOReader.
 
-Your settings are kept when you update. To uninstall, delete the plugin folder (and `settings/timelock.lua` to remove your saved settings).
+Your settings are kept when you update. To uninstall, delete the plugin folder (and `settings/schedulelock.lua` to remove your saved settings).
 
 ## Quick start
 
-1. Open **Top menu → Tools icon → More tools → TimeLock** (it may be on page 2).
-2. Change the passcode first. The default is `1234`.
+1. Open **Top menu → Tools icon → More tools → ScheduleLock** (it may be on page 2).
+2. Change the passcode first under **Set/Change Passcode**. The default is `1234`.
 3. Set your limits under **Set Days, Hours & Limits**.
-4. Turn on **Enable TimeLock**. It is off until you enable it.
+4. Turn on **Enable ScheduleLock** to start the limits.
+5. Under **Protections**, turn on whichever PIN locks you want.
+
+Everything is off until you switch it on.
 
 ## Menu
 
-- **Enable TimeLock**: the main on/off switch. Turning it off requires the passcode.
+- **Enable ScheduleLock**: switches the schedule limits on or off: time counting, the 5-minute warning and the lock screen. It does not affect the Protections. Turning it off requires the passcode.
 - **Used Today**: minutes used today out of today's limit.
-- **Set Days, Hours & Limits**: set a default limit, then tap a day to set its start time, end time and limit in minutes. Each part is optional. Changes require the passcode while the lock is on.
-- **Set/Change Passcode**: numeric passcode (digits only). Changing it requires the current passcode while the lock is on.
+- **Set Days, Hours & Limits**: set a default limit, then tap a day to set its start time, end time and limit in minutes. Each part is optional.
+- **Protections**: three separate switches, each independent of the schedule limits:
+  - **Lock Exit**: exiting KOReader needs the passcode.
+  - **Lock Plugin Management**: enabling or disabling any plugin needs the passcode.
+  - **Lock Time & Date**: **Set time** and **Set date** need the passcode. (KOReader only shows these on devices where it can set the clock.)
+- **Set/Change Passcode**: numeric passcode (digits only), shared by everything above.
 - **Check For Update**: checks the latest GitHub release (needs Wi-Fi).
 - **About**: version, repository and license.
+
+While any lock is on, turning something off or changing a setting (limits, schedule, passcode, Protections) needs the passcode. Turning something on never does.
 
 ## How it works
 
@@ -39,17 +46,19 @@ Your settings are kept when you update. To uninstall, delete the plugin folder (
 - **Hours:** each day can have a start and end time. A day with none can be used at any hour. Overnight windows (for example 22:00 to 06:00) work and count toward the day they start.
 - **What counts as usage:** only time spent with a book open and the screen awake. Time on the main screen, asleep, or with the screensaver showing is not counted.
 - **Warning:** when 5 minutes remain, a message appears and stays on screen until tapped.
-- **Locking:** when the limit is reached or you are outside the allowed hours, a full-screen lock covers KOReader, including the library. Tap **Unlock** and enter the passcode to lift the lock until midnight.
+- **Locking:** when the limit is reached or you are outside the allowed hours, a full-screen lock covers KOReader, including the library. Tap **Unlock** and enter the passcode to lift the schedule lock until midnight. This does not unlock the Protections.
 - **Reset:** used time resets to zero at midnight.
+- **Restart:** restarting KOReader is not locked.
 
 ## Limitations
 
 This is a simple deterrent, not a security system.
 
-- It does not block exiting or restarting KOReader.
-- KOReader's plugin manager can disable it.
-- The passcode is stored in plain text in `settings/timelock.lua`.
-- USB access, a forced reboot or changing the device clock can bypass it.
+- The Protections cover KOReader's menu entries. A gesture or shortcut mapped to the Exit action is not covered.
+- The plugin-management lock relies on a KOReader internal. If your version differs, the plugin logs a warning and plugin toggles stay unlocked.
+- The passcode is stored in plain text in `settings/schedulelock.lua`.
+- USB access or a forced reboot can bypass it.
+- Changing the clock by any route other than the locked Set time and Set date entries can affect the schedule.
 - An unlock is forgotten if KOReader restarts.
 
 ## Credits
