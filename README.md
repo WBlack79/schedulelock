@@ -6,6 +6,8 @@ A KOReader plugin that restricts device usage based on daily quotas and weekly s
 
 Developed and tested on a **Kindle Paperwhite 12th Gen** running **KOReader 2026.07.02**.
 
+Reports from other devices are welcome.
+
 ## Install or update
 
 1. Download `schedulelock.koplugin.zip` from the Releases page and unzip it. You should have a folder named `schedulelock.koplugin`.
@@ -17,7 +19,7 @@ Your settings are kept when you update. To uninstall, delete the plugin folder (
 
 ## Quick start
 
-1. Open **Top menu → Tools icon → More tools → ScheduleLock** (it may be on page 2).
+1. Open **Top menu → Tools icon → ScheduleLock** (it may be on page 2).
 2. Change the passcode first under **Set/Change Passcode**. The default is `1234`.
 3. Set your limits under **Set Days, Hours & Limits**.
 4. Turn on **Enable ScheduleLock** to start the limits.
