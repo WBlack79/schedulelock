@@ -17,7 +17,7 @@ Reports from other devices are welcome.
 
 Your settings are kept when you update. To uninstall, delete the plugin folder (and `settings/schedulelock.lua` to remove your saved settings).
 
-Updating from inside KOReader
+### Updating from inside KOReader
 
 From version 0.7 on, you can update without a computer: open Check For Update. If a newer release exists, you'll see its release notes and a Download & Install button. The new version is downloaded, checked, and swapped in with a backup of the old one, and then you can restart KOReader to start using it. If any lock is on, the passcode is asked for before installing. Version 0.7 itself has to be installed by hand (USB) once.
 
@@ -58,7 +58,7 @@ While any lock is on, turning something off or changing a setting (limits, sched
 - **Limits:** each day can have its own limit in minutes. A day without one uses the default limit. A limit of 0 blocks that day.
 - **Hours:** each day can have a start and end time. A day with none can be used at any hour. Overnight windows (for example 22:00 to 06:00) work and count toward the day they start.
 - **What counts as usage:** only time spent with a book open and the screen awake. Time on the main screen, asleep, or with the screensaver showing is not counted.
-- **Warning:** when 5 minutes remain, a message appears and stays on screen until tapped.
+- **Warning:** a message appears when the Warning Before Limit time is left (5 minutes by default, 0 turns it off) and stays on screen until tapped. A day whose limit isn't longer than the warning time gets no warning. If the warning time is more than 20 minutes, a second warning also appears when 5 minutes remain.
 - **Locking:** when the limit is reached or you are outside the allowed hours, a full-screen lock covers KOReader, including the library. Tap **Unlock** and enter the passcode to lift the schedule lock until midnight. This does not unlock the Protections.
 - **Reset:** used time resets to zero at midnight.
 - **Restart:** restarting KOReader is not locked.
