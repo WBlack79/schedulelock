@@ -17,6 +17,12 @@ Reports from other devices are welcome.
 
 Your settings are kept when you update. To uninstall, delete the plugin folder (and `settings/schedulelock.lua` to remove your saved settings).
 
+Updating from inside KOReader
+
+From version 0.7 on, you can update without a computer: open Check For Update. If a newer release exists, you'll see its release notes and a Download & Install button. The new version is downloaded, checked, and swapped in with a backup of the old one, and then you can restart KOReader to start using it. If any lock is on, the passcode is asked for before installing. Version 0.7 itself has to be installed by hand (USB) once.
+
+Requirements: Wi-Fi, an unzip command on the device, and a GitHub release with schedulelock.koplugin.zip attached.
+
 ## Quick start
 
 1. Open **Top menu → Tools icon → ScheduleLock** (it may be on page 2).
@@ -39,7 +45,7 @@ Everything is off until you switch it on.
   - **Lock Plugin Management**: enabling or disabling any plugin needs the passcode.
   - **Lock Time & Date**: **Set time** and **Set date** need the passcode. (KOReader only shows these on devices where it can set the clock.)
 - **Set/Change Passcode**: numeric passcode (digits only), shared by everything above.
-- **Check For Update**: checks the latest GitHub release (needs Wi-Fi).
+- **Check For Update**:checks the latest GitHub release, shows its release notes, and can download and install it (needs Wi-Fi).
 - **About**: version, repository and license.
 
 While any lock is on, turning something off or changing a setting (limits, schedule, passcode, Protections) needs the passcode. Turning something on never does.
@@ -69,6 +75,7 @@ This is a simple deterrent, not a security system.
 - USB access or a forced reboot can bypass it.
 - Changing the clock by any route other than the locked Set time and Set date entries can affect the schedule.
 - An unlock is forgotten if KOReader restarts.
+- In-app updating trusts whatever is attached to your latest GitHub release. It checks that the download is a ScheduleLock package but does not verify a signature or checksum.
 
 ## Credits
 
