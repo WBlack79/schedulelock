@@ -27,6 +27,8 @@ Your settings are kept when you update. To uninstall, delete the plugin folder (
 
 Everything is off until you switch it on.
 
+<img width="318" height="424" alt="FileManager_2026-11-21_175030" src="https://github.com/user-attachments/assets/7b18b621-749b-4640-bdf9-a17ef6738469" />
+
 ## Menu
 
 - **Enable ScheduleLock**: switches the schedule limits on or off: time counting, the 5-minute warning and the lock screen. It does not affect the Protections. Turning it off requires the passcode.
@@ -42,7 +44,8 @@ Everything is off until you switch it on.
 
 While any lock is on, turning something off or changing a setting (limits, schedule, passcode, Protections) needs the passcode. Turning something on never does.
 
-<img width="318" height="424" alt="FileManager_2026-11-21_175035" src="https://github.com/user-attachments/assets/5dedf3da-b324-4900-9e3e-080175ea19d7" />
+<img width="318" height="424" alt="FileManager_2026-11-21_175035" src="https://github.com/user-attachments/assets/5dedf3da-b324-4900-9e3e-080175ea19d7" />  <img width="318" height="424" alt="FileManager_2026-11-21_175313" src="https://github.com/user-attachments/assets/694854b6-6060-45fd-89b4-5337f1a11889" />
+
 
 ## How it works
 
