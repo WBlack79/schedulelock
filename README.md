@@ -44,7 +44,7 @@ Everything is off until you switch it on.
 
 While any lock is on, turning something off or changing a setting (limits, schedule, passcode, Protections) needs the passcode. Turning something on never does.
 
-<img width="318" height="424" alt="FileManager_2026-11-21_175035" src="https://github.com/user-attachments/assets/5dedf3da-b324-4900-9e3e-080175ea19d7" />  <img width="318" height="424" alt="FileManager_2026-11-21_175313" src="https://github.com/user-attachments/assets/694854b6-6060-45fd-89b4-5337f1a11889" />
+<img width="318" height="424" alt="FileManager_2026-11-21_175035" src="https://github.com/user-attachments/assets/5dedf3da-b324-4900-9e3e-080175ea19d7" />      <img width="318" height="424" alt="FileManager_2026-11-21_175313" src="https://github.com/user-attachments/assets/694854b6-6060-45fd-89b4-5337f1a11889" />
 
 
 ## How it works
