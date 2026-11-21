@@ -42,7 +42,7 @@ Everything is off until you switch it on.
 
 While any lock is on, turning something off or changing a setting (limits, schedule, passcode, Protections) needs the passcode. Turning something on never does.
 
-<img width="1272" height="1696" alt="FileManager_2026-11-21_175035" src="https://github.com/user-attachments/assets/5dedf3da-b324-4900-9e3e-080175ea19d7" />
+<img width="636" height="848" alt="FileManager_2026-11-21_175035" src="https://github.com/user-attachments/assets/5dedf3da-b324-4900-9e3e-080175ea19d7" />
 
 ## How it works
 
@@ -54,7 +54,7 @@ While any lock is on, turning something off or changing a setting (limits, sched
 - **Reset:** used time resets to zero at midnight.
 - **Restart:** restarting KOReader is not locked.
 
-<img width="1272" height="1696" alt="FileManager_2026-11-21_175039" src="https://github.com/user-attachments/assets/733d1da8-1f78-4fd2-b54e-502e23ae83df" />
+<img width="636" height="848" alt="FileManager_2026-11-21_175039" src="https://github.com/user-attachments/assets/733d1da8-1f78-4fd2-b54e-502e23ae83df" />
 
 ## Limitations
 
