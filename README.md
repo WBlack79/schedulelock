@@ -63,7 +63,7 @@ While any lock is on, turning something off or changing a setting (limits, sched
 - **Reset:** used time resets to zero at midnight.
 - **Restart:** restarting KOReader is not locked.
 
-<img width="318" height="424" alt="FileManager_2026-11-21_175039" src="https://github.com/user-attachments/assets/733d1da8-1f78-4fd2-b54e-502e23ae83df" />
+<img width="318" height="424" alt="FileManager_2026-11-22_110055" src="https://github.com/user-attachments/assets/eaeaa6bc-7c52-4db7-9068-003b08202b4a" />
 
 ## Limitations
 
@@ -79,7 +79,7 @@ This is a simple deterrent, not a security system.
 
 ## Credits
 
-Written by Walter Black, working with [Claude](https://claude.ai), Anthropic's AI model.
+Written by Walter Black, working with [Claude](https://claude.ai).
 
 ## License
 
