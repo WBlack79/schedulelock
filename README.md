@@ -1,6 +1,12 @@
 # ScheduleLock
 
-A KOReader plugin that restricts device usage based on daily quotas and weekly schedule windows. It can also require a PIN to exit KOReader, change plugins, or set the time and date. Useful as a simple screen-time control for a shared or child's e-reader.
+A KOReader plugin that restricts device usage based on daily quotas and weekly schedule windows. It can also require a PIN to exit KOReader, change plugins, or set the time and date. Useful as a simple way to manage when and how long an e-reader is used, for yourself, a child, or a shared device.
+
+## Why it exists
+
+ScheduleLock isn't meant to discourage reading. It helps you choose when the e-reader gets used.
+
+I built it for my child, who loves to read so much that homework and studying can get pushed aside. School also restricts electronics during the day, so reading time at home needs to fit around everything else. Setting allowed hours and a daily limit keeps study time free of distractions and still leaves plenty of time to read at the right moments, like after homework or before bed.
 
 ## Tested on
 
