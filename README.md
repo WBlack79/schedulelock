@@ -45,7 +45,7 @@ Everything is off until you switch it on.
 
 - **Enable ScheduleLock**: switches the schedule limits on or off: time counting, the 5-minute warning and the lock screen. It does not affect the Protections. Turning it off requires the passcode.
 - **Used Today**: minutes used today out of today's limit.
-- **Set Days, Hours & Limits**: set a default limit, then tap a day to set its start time, end time and limit in minutes. Each part is optional.
+- **Set Days, Hours & Limits**: tap a day to set its Start/End Time, Warning Before Day Ends, Daily Time Limit and Warning Before Time Limit. Every day starts at 09:00-21:00 with a 180-minute limit. A day's Copy To... button copies its settings to the weekdays, the weekend or all days (after a confirmation).
 - **Protections**: three separate switches, each independent of the schedule limits:
   - **Lock Exit**: exiting KOReader needs the passcode.
   - **Lock Plugin Management**: enabling or disabling any plugin needs the passcode.
@@ -61,20 +61,21 @@ While any lock is on, turning something off or changing a setting (limits, sched
 
 ## How it works
 
-- **Limits:** each day can have its own limit in minutes. A day without one uses the default limit. A limit of 0 blocks that day.
-- **Hours:** each day can have a start and end time. A day with none can be used at any hour. Overnight windows (for example 22:00 to 06:00) work and count toward the day they start.
+- **Limits:** each day has its own Daily Time Limit in minutes (180 to start). A limit of 0 blocks that day.
+- **Hours:** every day allows 9:00 AM to 9:00 PM (09:00-21:00) by default. Each day can have its own start and end time, or **Any Hours (Clear Start/End)** for no restriction. Start/End Time opens two time pickers in a row, start first. Overnight windows (for example 22:00 to 06:00) work and count toward the day they start.
 - **What counts as usage:** only time spent with a book open and the screen awake. Time on the main screen, asleep, or with the screensaver showing is not counted.
-- **Warning:** a message appears when the Warning Before Limit time is left (5 minutes by default, 0 turns it off) and stays on screen until tapped. A day whose limit isn't longer than the warning time gets no warning. If the warning time is more than 20 minutes, a second warning also appears when 5 minutes remain.
-- **Locking:** when the limit is reached or you are outside the allowed hours, a full-screen lock covers KOReader, including the library. Tap **Unlock** and enter the passcode to lift the schedule lock until midnight. This does not unlock the Protections.
+- **Warnings:** a popup appears 5 minutes before the Daily Time Limit runs out and 5 minutes before the allowed hours end, and stays on screen until tapped. Under **Warning Before Time Limit** and **Warning Before Day Ends** you can choose an earlier warning (10 to 60 minutes) for each day. When one is chosen, you get that warning and another with 1 minute left, instead of the 5-minute one. A limit or window that isn't longer than a warning time gets no warning for it.
+- **Locking:** when the limit is reached or you are outside the allowed hours, a full-screen lock covers KOReader, including the library. The lock screen shows when the device can be used again. Tap **Unlock**, enter the passcode, then choose **Add 15 Minutes**, **Add 30 Minutes** or **Unlock For Today**. Added minutes ignore the limit and the allowed hours, count down only while you read, and end at midnight. None of these unlock the Protections.
+- **Wrong passcodes:** three wrong passcodes in a row lock passcode entry for 5 minutes.
 - **Reset:** used time resets to zero at midnight.
 - **Restart:** restarting KOReader is not locked.
 
-<img width="318" height="424" alt="FileManager_2026-11-22_110055" src="https://github.com/user-attachments/assets/eaeaa6bc-7c52-4db7-9068-003b08202b4a" />
+<img width="318" height="424" alt="FileManager_2026-11-25_143915" src="https://github.com/user-attachments/assets/5b92206e-3e84-4937-a4f7-010258481534" />
 
 ## Limitations
 
 This is a simple deterrent, not a security system.
-
+ 
 - The Protections cover KOReader's menu entries. A gesture or shortcut mapped to the Exit action is not covered.
 - The plugin-management lock relies on a KOReader internal. If your version differs, the plugin logs a warning and plugin toggles stay unlocked.
 - The passcode is stored in plain text in `settings/schedulelock.lua`.
